@@ -16,14 +16,20 @@ const BlurImage: React.FC<BlurImageProps> = ({ blurSrc, src, className }) => {
   }, []);
   return (
     <div className={cn("relative overflow-hidden", className)}>
-      <NextImage
-        layout="fill"
-        src={isLoaded ? src : blurSrc}
-        alt="article_image"
-        className={cn({
+      <div
+        className={cn("transition duration-200 w-full h-full", {
           "blur-md": !isLoaded,
         })}
-      />
+      >
+        {isLoaded && <NextImage layout="fill" src={src} alt="article_image" />}
+        {!isLoaded && (
+          <img
+            src={blurSrc}
+            alt="blur_image"
+            className="w-full h-full absolute inset-0"
+          />
+        )}
+      </div>
     </div>
   );
 };
