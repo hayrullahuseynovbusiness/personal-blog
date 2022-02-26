@@ -9,7 +9,7 @@ const SearchBar = () => {
   }, [keyword]);
   return (
     <div className="p-2 flex items-center bg-white rounded-lg border-2 focus-within:border-blue-500">
-      <SearchIcon className="w-6 h-6 text-neutral-600 mr-2" />
+      <SearchIcon className="w-6 h-6 text-gray-300 mr-2" />
       <input
         onChange={(e) => setKeyword(e.target.value)}
         className="w-full outline-none"
