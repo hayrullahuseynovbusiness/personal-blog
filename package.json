@@ -21,6 +21,7 @@
     "graphql-request": "^4.0.0",
     "markdown-it": "^12.3.2",
     "next": "10",
+    "next-pwa": "^5.4.4",
     "next-themes": "^0.1.1",
     "postcss": "^8.4.6",
     "react": "^17.0.2",

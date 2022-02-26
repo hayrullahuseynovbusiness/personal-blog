@@ -21,7 +21,7 @@ const BlurImage: React.FC<BlurImageProps> = ({ blurSrc, src, className }) => {
           "blur-md": !isLoaded,
         })}
       >
-        {isLoaded && <NextImage layout="fill" src={src} alt="article_image" />}
+        {isLoaded && <img  src={src} className="w-full h-full absolute inset-0" alt="article_image" />}
         {!isLoaded && (
           <img
             src={blurSrc}
