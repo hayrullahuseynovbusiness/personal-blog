@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Article from "components/Article";
 import BlurImage from "components/BlurImage";
 import SearchBar from "components/SearchBar";
@@ -5,6 +6,18 @@ import SEO from "components/SEO";
 import { getAllPosts } from "utils";
 
 const Home = ({ posts }) => {
+  useEffect(() => {
+    const notifyMe = async () => {
+      const permission = await Notification.requestPermission();
+      if (permission) {
+        new Notification("Joe Biden", {
+          icon: "/joe.jpg",
+          body: "How is it going?",
+        });
+      }
+    };
+    notifyMe();
+  }, []);
   return (
     <div>
       <SEO />
