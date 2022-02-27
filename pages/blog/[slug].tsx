@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ChevronLeftIcon } from "@heroicons/react/outline";
 import BlurImage from "components/BlurImage";
 import SEO from "components/SEO";
 import md from "markdown-it";
@@ -5,8 +7,15 @@ import { getAllPosts, getPostBySlug } from "utils";
 const BlogPost = ({ post }) => {
   return (
     <div className="pt-10 w-full">
+      <div className="flex items-center justify-start">
+        <Link href="/">
+          <a className="p-2 rounded-full bg-neutral-500">
+            <ChevronLeftIcon className="w-5 h-5" />
+          </a>
+        </Link>
+      </div>
       <SEO title={post?.title} />
-      <div className="prose pb-4">
+      <div className="prose py-4">
         <h1>{post?.title}</h1>
       </div>
       <BlurImage
