@@ -9,7 +9,7 @@ const BlogPost = ({ post }) => {
     <div className="pt-10 w-full">
       <div className="flex items-center justify-start">
         <Link href="/">
-          <a className="p-2 rounded-full bg-neutral-500">
+          <a className="p-2 rounded-full bg-neutral-900/75 text-white">
             <ChevronLeftIcon className="w-5 h-5" />
           </a>
         </Link>
